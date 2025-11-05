@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Student_Grade {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+//    input quiz,assignment,mid  and final marks
+        System.out.println("enter quiz marks(out of 10)");
+        int quiz=sc.nextInt();
+
+        System.out.print("Enter assignment marks (out of 10):");
+        int assignment= sc.nextInt();
+
+        System.out.print("Enter Mid Marks (out of 25):");
+        int mid= sc.nextInt();
+
+        System.out.print("Enter Final Exam Marks (out of 50): ");
+        int final_exam= sc.nextInt();
+
+//        Calculate Total Marks
+        int totalMarks = quiz + assignment + mid + final_exam;
+
+//      type casting
+        double average = (double) totalMarks;
+
+        System.out.println("Total Marks ="+totalMarks);
+        System.out.println("Average = "+average);
+
+//         Display Grade with the help of if-else statement
+        if (average >= 85)
+            System.out.println("Grade = A");
+         else if (average >= 70 && average < 85)
+            System.out.println("Grade = B");
+         else if (average >= 50 && average < 70)
+            System.out.println("Grade = C");
+        else
+            System.out.println("Grade = Fail");
+        
+    }
+}
