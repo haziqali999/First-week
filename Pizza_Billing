@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class pizza {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter pizza size(small/medium/large");
+        String  size=sc.nextLine();
+        int price=0;
+        switch(size){
+            case "small":
+                price=100;
+                System.out.println(" you want peperroni yes/no");
+                String a=sc.nextLine();
+                if(a.equalsIgnoreCase("yes"))
+                    price+=30;
+                break;
+            case "medium":
+                price=200;
+                System.out.println(" you want peperroni yes/no");
+                String b=sc.nextLine();
+                if(b.equalsIgnoreCase("yes"))
+                    price+=50;
+                break;
+            case "large":
+                price=300;
+                System.out.println(" you want peperroni yes/no");
+                String c=sc.nextLine();
+                if(c.equalsIgnoreCase("yes"))
+                    price+=50;
+                break;
+            default:
+                System.out.println("invalid input");
+                break;
+        }
+        System.out.println(" you want extra cheese yes/no");
+        String ch=sc.nextLine();
+        if(ch.equalsIgnoreCase("yes")){
+            price=+20;
+        }else
+            System.out.println("no");
+        System.out.println("total price ="+price);
+    }
+}
